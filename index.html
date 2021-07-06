@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact App with prototype</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            color:white;
+        }
+        body{
+            background: #000;
+        }
+        .logo{
+            margin-top:2rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color:rgb(175, 35, 240)
+        }
+
+        .inputs {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        
+        }
+        input:not(#button) {
+            padding: .5rem 1.4rem;
+            margin-bottom: 1.8rem;
+            width: 20rem;
+            display: block;
+            border-radius: 4rem;
+            outline: none;
+            border:none;
+            color:#000;
+        }
+        label{
+            display: block;
+            margin-bottom: .5rem;
+            padding-left:.5rem;
+            font-size: 1.2rem;
+            color:rgba(170, 85, 204, 0.76);
+        }
+        #button{
+            padding: .5rem .4rem;
+            width:7rem;
+            border-radius: 4rem;
+            border:none;
+            background: #000;
+            color:#fff;
+            height:2.5rem;
+            cursor: pointer;
+            font-size: 1.2rem;
+            border:1px solid #fff;
+        }
+        
+        table{
+            width:60%;
+            margin:5rem auto;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+        td{
+            padding: .5rem .5rem;
+        }
+        .edit,.delete{
+            width:6rem;
+            margin-left:.3rem;
+            height:2rem;
+            border:none;
+            border-radius:10px;
+            cursor: pointer;
+        }
+        .edit{
+            background: rgb(11, 236, 11);
+        }
+        .delete{
+            background: rgb(241, 8, 8);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="logo">Contact App</h1>
+        <div class="inputs">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" id="name">
+            </div>
+
+            <div>
+                <label for="email">Email address</label>
+                <input type="email" id="email">
+            </div>
+
+            <div>
+                <label for="number">Number</label>
+                <input type="text" id="number">
+            </div>
+
+            <input type="button" id="button" value="Submit">
+        </div>
+        <div class="contactContainer">
+            <table>
+                <thead>
+                    <tr>
+                        <th>SI No</th>
+                        <th>Name</th>
+                        <th>Email Address </th>
+                        <th>Number</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
